@@ -853,12 +853,13 @@
           : `<div class="text-orange-950 font-black text-xl">❓ คลิกเพื่อเปิดดูภาพคำถาม</div>`;
 
         const isFlipped = activeFlips[index];
+        const cardBgClass = currentSetIndex === 0 ? 'bg-yellow-400' : (currentSetIndex === 1 ? 'bg-purple-300' : 'bg-[#6CCEE6]');
 
         wrapper.innerHTML = `
           <div id="card-${index}" class="card-flipper ${isFlipped ? 'flipped' : ''} relative w-full h-full transform-style-3d rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
             
             <!-- FRONT FACE (เต็มช่อง 100% ไร้ชื่อภาพ ไร้เลขป้ายมุมการ์ด ไร้ป้ายคะแนน) -->
-            <div class="card-front absolute inset-0 w-full h-full backface-hidden bg-[#EE5B3E] flex items-center justify-center overflow-hidden"
+            <div class="card-front absolute inset-0 w-full h-full backface-hidden ${cardBgClass} flex items-center justify-center overflow-hidden"
                  onclick="handleCardClick(${index})">
               
               <!-- Full bleed graphic container -->

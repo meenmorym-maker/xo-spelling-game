@@ -391,7 +391,7 @@
 
     let currentSetIndex = 0;
     let activeModalIndex = null;
-    const STORAGE_KEY_SETS = 'thai_flipcards_3sets_clean_v6';
+    const STORAGE_KEY_SETS = 'thai_flipcards_3sets_clean_v7';
 
     function loadAllSets() {
       try {
